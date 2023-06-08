@@ -40,3 +40,19 @@ pointers.forEach((item, id) => {
     activePointer(id);
   });
 });
+
+const sectionContato = document.querySelectorAll(".section-box");
+const metade = window.innerHeight * 0.6;
+function scrollBox() {
+  sectionContato.forEach((item) => {
+    const top = item.getBoundingClientRect().top - metade < 0;
+    if (top) {
+      item.children[0].classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", () => {
+  scrollBox();
+});
+console.log(sectionContato);
