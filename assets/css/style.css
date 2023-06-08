@@ -183,6 +183,5 @@ header {
 @media (max-width: 450px) {
   .section-box {
     width: 285px;
-    background-color: yellow;
   }
 }
