@@ -1,4 +1,10 @@
 const menu = document.querySelectorAll(".menu a");
+const menuBurguer = document.querySelector(".menuburguer");
+const nav = document.querySelector(".menu nav");
+menuBurguer.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
 menu[0].classList.add("active");
 function menuAnimation(e) {
   e.preventDefault();

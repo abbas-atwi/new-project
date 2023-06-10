@@ -204,7 +204,19 @@ header {
   display: block;
   animation: showH2 0.8s forwards;
 }
-
+.menuburguer {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.line-burguer {
+  background-color: #fafafa;
+  height: 3px;
+}
 footer {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -212,8 +224,47 @@ footer {
   text-align: center;
   background-color: #222;
 }
+
+@keyframes Showmenu {
+  from {
+    margin-right: -1000px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}
+
 @media (max-width: 450px) {
   .section-box {
     width: 285px;
+  }
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+  }
+  .menuburguer {
+    display: flex;
+  }
+  .menu nav {
+    position: absolute;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    display: none;
+  }
+  .menu nav.active {
+    display: block;
+    animation: Showmenu 1s forwards;
+  }
+  .menu ul {
+    align-items: start;
+    flex-direction: column;
+  }
+  .area-pointers {
+    z-index: 0;
   }
 }
