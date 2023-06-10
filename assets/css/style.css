@@ -162,7 +162,6 @@ header {
 }
 .section-box.active {
   opacity: 1;
-
   animation: showH2 0.3s forwards;
 }
 @keyframes showH2 {
@@ -204,6 +203,14 @@ header {
 .section-box h2.active {
   display: block;
   animation: showH2 0.8s forwards;
+}
+
+footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #fafafa;
+  text-align: center;
+  background-color: #222;
 }
 @media (max-width: 450px) {
   .section-box {

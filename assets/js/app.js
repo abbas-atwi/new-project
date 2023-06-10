@@ -43,6 +43,9 @@ pointers.forEach((item, id) => {
 
 const sectionContato = document.querySelectorAll(".section-box");
 const metade = window.innerHeight * 0.6;
+sectionContato[0].classList.add("active");
+sectionContato[0].children[0].classList.add("active");
+sectionContato[0].children[1].children[0].children[0].classList.add("active");
 function scrollBox() {
   sectionContato.forEach((item) => {
     const top = item.getBoundingClientRect().top - metade < 0;
