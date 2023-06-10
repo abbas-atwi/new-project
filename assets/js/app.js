@@ -48,6 +48,10 @@ function scrollBox() {
     const top = item.getBoundingClientRect().top - metade < 0;
     if (top) {
       item.children[0].classList.add("active");
+
+      console.log(
+        item.children[1].children[0].children[0].classList.add("active")
+      );
     }
   });
 }

@@ -151,13 +151,13 @@ header {
   flex-wrap: wrap;
 }
 .section-box {
-  padding-top: 5px;
+  padding-top: 30px;
   padding-bottom: 5px;
   width: 350px;
   height: 300px;
   border: 3px solid #42dd1f;
   margin: 10px;
-  background-color: #222;
+  background-color: #fafafa;
 }
 @keyframes showH2 {
   from {
@@ -171,10 +171,29 @@ header {
 }
 
 .section-box h2 {
-  color: #fff;
+  color: #222;
   text-align: center;
   font-size: 30px;
   display: none;
+}
+
+.box-content {
+  height: calc(100% - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-box {
+  height: 200px;
+}
+.photo-box img {
+  width: 200px;
+  display: none;
+}
+.photo-box img.active {
+  display: block;
+  animation: showH2 1.2s forwards;
 }
 .section-box h2.active {
   display: block;
