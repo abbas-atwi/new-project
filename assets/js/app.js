@@ -47,11 +47,9 @@ function scrollBox() {
   sectionContato.forEach((item) => {
     const top = item.getBoundingClientRect().top - metade < 0;
     if (top) {
+      item.classList.add("active");
       item.children[0].classList.add("active");
-
-      console.log(
-        item.children[1].children[0].children[0].classList.add("active")
-      );
+      item.children[1].children[0].children[0].classList.add("active");
     }
   });
 }

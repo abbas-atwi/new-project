@@ -158,6 +158,12 @@ header {
   border: 3px solid #42dd1f;
   margin: 10px;
   background-color: #fafafa;
+  opacity: 0;
+}
+.section-box.active {
+  opacity: 1;
+
+  animation: showH2 0.3s forwards;
 }
 @keyframes showH2 {
   from {
