@@ -225,6 +225,13 @@ footer {
   background-color: #222;
 }
 
+.section-home {
+  background-color: #222;
+  color: #fff;
+  height: 500px;
+  border-bottom: 2px solid #42dd1f;
+}
+
 @keyframes Showmenu {
   from {
     margin-right: -1000px;

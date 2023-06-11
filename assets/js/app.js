@@ -66,4 +66,21 @@ function scrollBox() {
 window.addEventListener("scroll", () => {
   scrollBox();
 });
+
+const menulink = document.querySelectorAll(".menu a[href^='#']");
+menulink.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = item.getAttribute("href");
+    const section = document.querySelector(href);
+    const sectionTop = section.getBoundingClientRect().top;
+
+    window.scrollTo({
+      top: sectionTop,
+      behavior: "smooth",
+    });
+
+    console.log(href);
+  });
+});
 console.log(sectionContato);
