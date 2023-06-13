@@ -263,10 +263,14 @@ header {
   animation: showBox 0.3s forwards;
 }
 .box-home h1 {
-  color: #222;
+  display: none;
+  color: #fff;
   font-weight: bold;
 }
-
+.box-home h1.active {
+  display: block;
+  animation: showH2 0.8s forwards;
+}
 @keyframes Showmenu {
   from {
     margin-right: -1000px;

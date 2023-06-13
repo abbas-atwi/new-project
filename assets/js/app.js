@@ -63,8 +63,28 @@ function scrollBox() {
   });
 }
 const mt = window.innerHeight * 0.6;
+
+const boxAll = document.querySelectorAll(".box-home");
+
+const m = window.innerHeight * 0.6;
+
+function showBoxH1() {
+  // boxAll.forEach((item) => {
+  //   item.children[0].classList.remove("active");
+  // });
+  boxAll.forEach((item) => {
+    const top = item.children[0].getBoundingClientRect().top - m;
+    if (top < 0) {
+      setTimeout(() => {
+        item.children[0].classList.add("active");
+      }, 1000);
+    }
+  });
+}
+
 window.addEventListener("scroll", () => {
   scrollBox();
+  showBoxH1();
   const scr = document.querySelector(".js-scroll");
   const tops = scr.getBoundingClientRect().top - mt < 0;
   let count = [800, 1100, 1400];
