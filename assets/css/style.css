@@ -240,11 +240,9 @@ header {
 
 @keyframes showBox {
   from {
-    opacity: 0;
     transform: translate3d(-40px, 0, 0);
   }
   to {
-    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
@@ -252,7 +250,8 @@ header {
 .box-home {
   width: 260px;
   height: 250px;
-  display: none;
+  display: flex;
+  opacity: 0;
   justify-content: center;
   align-items: center;
   margin-left: 10px;
@@ -260,7 +259,7 @@ header {
   border: 1px solid #fafafa;
 }
 .box-home.active {
-  display: flex;
+  opacity: 1;
   animation: showBox 0.3s forwards;
 }
 .box-home h1 {

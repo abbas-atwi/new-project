@@ -66,9 +66,9 @@ const mt = window.innerHeight * 0.6;
 window.addEventListener("scroll", () => {
   scrollBox();
   const scr = document.querySelector(".js-scroll");
-  const tops = scr.getBoundingClientRect().top;
-  let count = [2500, 3500, 4500];
-  if (tops > 36) {
+  const tops = scr.getBoundingClientRect().top - mt < 0;
+  let count = [800, 1100, 1400];
+  if (tops) {
     for (let i = 0; i < boxs.length; i++) {
       setTimeout(() => {
         console.log(boxs[i].classList.add("active"));
