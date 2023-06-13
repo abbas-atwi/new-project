@@ -62,9 +62,19 @@ function scrollBox() {
     }
   });
 }
-
+const mt = window.innerHeight * 0.6;
 window.addEventListener("scroll", () => {
   scrollBox();
+  const scr = document.querySelectorAll(".js-scroll");
+  const tops = scr[1].getBoundingClientRect().top;
+  let count = [1000, 2000, 3000];
+  if (tops < 40) {
+    for (let i = 0; i < boxs.length; i++) {
+      setTimeout(() => {
+        console.log(boxs[i].classList.add("active"));
+      }, count[i]);
+    }
+  }
 });
 
 const menulink = document.querySelectorAll(".menu a[href^='#']");
@@ -91,16 +101,15 @@ function boxActive() {
     item.classList.remove(".active");
   });
 }
-const metades = window.innerHeight * 0.6;
+function addShow() {
+  const metades = window.innerHeight * 0.6;
+  const boxTop = boxContainer.getBoundingClientRect().top - metades;
+  console.log(boxTop);
+  if (boxTop) {
+  }
+}
+
 window.addEventListener("scroll", () => {
   boxActive();
-  const boxTop = boxContainer.getBoundingClientRect().top - metades;
-  let count = [1000, 2000, 3000];
-  if (boxTop) {
-    for (let i = 0; i < boxs.length; i++) {
-      setTimeout(() => {
-        console.log(boxs[i].classList.add("active"));
-      }, count[i]);
-    }
-  }
+  addShow();
 });
