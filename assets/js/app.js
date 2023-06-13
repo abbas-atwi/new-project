@@ -96,7 +96,7 @@ window.addEventListener("scroll", () => {
   boxActive();
   const boxTop = boxContainer.getBoundingClientRect().top - metades;
   let count = [1000, 2000, 3000];
-  if (boxTop < 0) {
+  if (boxTop) {
     for (let i = 0; i < boxs.length; i++) {
       setTimeout(() => {
         console.log(boxs[i].classList.add("active"));
