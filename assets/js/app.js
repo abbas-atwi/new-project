@@ -67,7 +67,7 @@ window.addEventListener("scroll", () => {
   scrollBox();
   const scr = document.querySelector(".js-scroll");
   const tops = scr.getBoundingClientRect().top;
-  let count = [1000, 2000, 3000];
+  let count = [2500, 3500, 4500];
   if (tops > 36) {
     for (let i = 0; i < boxs.length; i++) {
       setTimeout(() => {
@@ -110,5 +110,4 @@ function addShow() {
 
 window.addEventListener("scroll", () => {
   boxActive();
-  addShow();
 });
