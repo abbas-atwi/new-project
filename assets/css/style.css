@@ -217,19 +217,55 @@ header {
   background-color: #fafafa;
   height: 3px;
 }
-footer {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  color: #fafafa;
-  text-align: center;
-  background-color: #222;
-}
 
 .section-home {
   background-color: #222;
   color: #fff;
-  height: 500px;
   border-bottom: 2px solid #42dd1f;
+}
+
+.section-home-body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.section-home-container {
+  width: 100vw;
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+@keyframes showBox {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.box-home {
+  width: 260px;
+  height: 250px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #fafafa;
+}
+.box-home.active {
+  display: flex;
+  animation: showBox 0.3s forwards;
+}
+.box-home h1 {
+  color: #222;
+  font-weight: bold;
 }
 
 @keyframes Showmenu {
@@ -241,6 +277,13 @@ footer {
   }
 }
 
+footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #fafafa;
+  text-align: center;
+  background-color: #222;
+}
 @media (max-width: 450px) {
   .section-box {
     width: 285px;
@@ -273,5 +316,9 @@ footer {
   }
   .area-pointers {
     z-index: 0;
+  }
+  .box-home {
+    width: 250px;
+    height: 120px;
   }
 }
