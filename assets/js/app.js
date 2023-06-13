@@ -65,10 +65,10 @@ function scrollBox() {
 const mt = window.innerHeight * 0.6;
 window.addEventListener("scroll", () => {
   scrollBox();
-  const scr = document.querySelectorAll(".js-scroll");
-  const tops = scr[1].getBoundingClientRect().top;
+  const scr = document.querySelector(".js-scroll");
+  const tops = scr.getBoundingClientRect().top;
   let count = [1000, 2000, 3000];
-  if (tops < 40) {
+  if (tops > 36) {
     for (let i = 0; i < boxs.length; i++) {
       setTimeout(() => {
         console.log(boxs[i].classList.add("active"));
@@ -76,7 +76,6 @@ window.addEventListener("scroll", () => {
     }
   }
 });
-
 const menulink = document.querySelectorAll(".menu a[href^='#']");
 menulink.forEach((item) => {
   item.addEventListener("click", (e) => {
