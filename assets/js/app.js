@@ -95,15 +95,12 @@ const metades = window.innerHeight * 0.6;
 window.addEventListener("scroll", () => {
   boxActive();
   const boxTop = boxContainer.getBoundingClientRect().top - metades;
-  boxs.forEach((item, id) => {
-    let count = [1000, 2000, 3000];
+  let count = [1000, 2000, 3000];
+  if (boxTop < 0) {
     for (let i = 0; i < boxs.length; i++) {
       setTimeout(() => {
         console.log(boxs[i].classList.add("active"));
       }, count[i]);
     }
-  });
+  }
 });
-console.log(boxs);
-
-console.log(sectionContato);
