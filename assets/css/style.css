@@ -340,6 +340,11 @@ header {
   background-color: #42dd1f;
 }
 .section-profile {
+  background: url(../img/londres.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
   background-color: #222;
   height: 300px;
 }
@@ -371,7 +376,8 @@ header {
   width: 120px;
   /* display: inline; */
   margin-top: 10px;
-
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
   text-align: center;
   color: #fafafa;
 }
