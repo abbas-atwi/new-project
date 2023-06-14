@@ -56,9 +56,16 @@ function scrollBox() {
   sectionContato.forEach((item) => {
     const top = item.getBoundingClientRect().top - metade < 0;
     if (top) {
-      item.classList.add("active");
-      item.children[0].classList.add("active");
-      item.children[1].children[0].children[0].classList.add("active");
+      const count = [1000, 1200, 1400, 1600, 1800, 2000];
+      for (let i = 0; i < sectionContato.length; i++) {
+        setTimeout(() => {
+          sectionContato[i].classList.add("active");
+        }, count[i]);
+        // h1
+        item.children[0].classList.add("active");
+        // img
+        item.children[1].children[0].children[0].classList.add("active");
+      }
     }
   });
 }
