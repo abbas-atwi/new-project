@@ -82,6 +82,8 @@ header {
   display: flex;
 }
 .banner-body .slider {
+  padding-top: 10px;
+  padding-bottom: 5px;
   width: 100vw;
   height: inherit;
 }
@@ -89,6 +91,10 @@ header {
   width: 100vw;
   max-width: 1140px;
   height: inherit;
+  background: url(../img/banner.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .slider-area h1 {
   text-align: center;
@@ -102,7 +108,10 @@ header {
   text-align: center;
   font-size: 1.3rem;
 }
-
+.slider-area p,
+.slider-area h1 {
+  display: none;
+}
 .area-pointers {
   position: absolute;
   width: 100vw;
@@ -155,9 +164,9 @@ header {
   padding-bottom: 5px;
   width: 350px;
   height: 300px;
-  border: 3px solid #42dd1f;
   margin: 10px;
-  background-color: #fafafa;
+  border-radius: 5px;
+  background-color: #222;
   opacity: 0;
 }
 .section-box.active {
@@ -197,10 +206,13 @@ header {
   display: none;
 }
 .photo-box img.active {
+  filter: drop-shadow(1px 2px 8px #fff);
   display: block;
   animation: showH2 1.2s forwards;
+  transition: filter 1s ease-in-out;
 }
 .section-box h2.active {
+  color: #fafafa;
   display: block;
   animation: showH2 0.8s forwards;
 }
