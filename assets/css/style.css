@@ -417,12 +417,17 @@ header {
   border-radius: 5px;
   display: inline-block;
   color: #eee;
-  background-color: #42dd1f;
+  background-color: #9dea8b;
   padding: 4px 40px;
+}
+.section-postar a.active {
+  background-color: #42dd1f;
+  color: #222;
 }
 .section-postar input::placeholder {
   font-size: 12px;
 }
+
 .new-post span {
   color: #ccc;
   font-weight: normal;
