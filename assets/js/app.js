@@ -57,13 +57,13 @@ const namesAnimals = ["jack", "tom", "blue", "bidu", "huhu", "patu"];
 function scrollBox() {
   sectionContato.forEach((item, id) => {
     const top = item.getBoundingClientRect().top - metade < 0;
-    item.classList.add("active");
     // item.children[0].innerHTML = namesAnimals[id];
     if (top) {
       const count = [1000, 1200, 1400, 1600, 1800, 2000];
       for (let i = 0; i < sectionContato.length; i++) {
         setTimeout(() => {
           // h1
+          sectionContato[i].classList.add("active");
           console.log(namesAnimals[i]);
           // img
           item.children[0].classList.add("active");
