@@ -389,6 +389,28 @@ header {
   display: flex;
   text-transform: lowercase;
 }
+
+.post-container {
+  padding-top: 20px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  gap: 10px;
+}
+.new-post {
+  width: 260px;
+  height: 160px;
+  border: 2px solid #222;
+  background-color: #fafafa;
+}
+.new-post span {
+  color: #ccc;
+  font-weight: normal;
+  font-size: 10px;
+  padding-left: 3px;
+}
 @keyframes Showmenu {
   from {
     margin-right: -1000px;
