@@ -265,6 +265,8 @@ header {
 .box-home:hover {
   scale: 1.1;
   transition: scale 0.3s ease-in-out;
+  border: 2px solid #42dd1f;
+  box-shadow: 2px 2px 16px rgba(1, 1, 1, 0.9);
 }
 
 .box-home.active {
@@ -280,6 +282,36 @@ header {
 .box-home h1.active {
   display: block;
   animation: showH2 1s forwards;
+}
+
+.section-contato-container {
+  border-bottom: 2px solid #42dd1f;
+}
+.section-contato-info {
+  max-width: 1140px;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.section-info {
+  width: 600px;
+  height: 260px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.section-info p {
+  font-size: 23px;
+  text-align: center;
+  font-weight: normal;
+  color: #2356;
+  text-transform: lowercase;
 }
 @keyframes Showmenu {
   from {
@@ -333,5 +365,13 @@ footer {
   .box-home {
     width: 250px;
     height: 120px;
+  }
+  .section-info {
+    width: 400px;
+    height: 240px;
+    padding: 5px;
+  }
+  .section-info p {
+    font-size: 18px;
   }
 }
