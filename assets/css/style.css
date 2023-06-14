@@ -405,12 +405,34 @@ header {
   border: 1px solid #ddd;
   background-color: #fafafa;
   box-shadow: 2px 2px 9px #ccc;
+  border-radius: 5px;
+}
+.section-postar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: blue;
+  color: #eee;
+}
+.section-postar a {
+  border-radius: 5px;
+  display: inline-block;
+  color: #eee;
+  background-color: #42dd1f;
+  padding: 4px 40px;
+}
+.section-postar input::placeholder {
+  font-size: 12px;
 }
 .new-post span {
   color: #ccc;
   font-weight: normal;
   font-size: 10px;
   padding-left: 3px;
+}
+.new-post p {
+  color: #222;
+  padding: 10px;
+  background-color: #ccc;
 }
 @keyframes Showmenu {
   from {
