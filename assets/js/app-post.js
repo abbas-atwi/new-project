@@ -10,7 +10,8 @@ function posts() {
   const comments = document.createElement("p");
   div.setAttribute("class", "new-post");
   div.appendChild(span);
-  span.innerHTML = `${hours[0]}:${hours[1]}`;
+  const hoursTime = hours[1] <= 0 ? "0" : "";
+  span.innerHTML = `${hours[0]}:${hoursTime}${hours[1]}`;
   comments.innerHTML = inputsValue.value;
   div.appendChild(comments);
   sectionContainer.appendChild(div);
