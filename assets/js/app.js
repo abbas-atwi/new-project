@@ -52,17 +52,21 @@ const metade = window.innerHeight * 0.6;
 sectionContato[0].classList.add("active");
 sectionContato[0].children[0].classList.add("active");
 sectionContato[0].children[1].children[0].children[0].classList.add("active");
+const namesAnimals = ["jack", "tom", "blue", "bidu", "huhu", "patu"];
+
 function scrollBox() {
-  sectionContato.forEach((item) => {
+  sectionContato.forEach((item, id) => {
     const top = item.getBoundingClientRect().top - metade < 0;
+    item.classList.add("active");
+    // item.children[0].innerHTML = namesAnimals[id];
     if (top) {
       const count = [1000, 1200, 1400, 1600, 1800, 2000];
       for (let i = 0; i < sectionContato.length; i++) {
         setTimeout(() => {
-          sectionContato[i].classList.add("active");
           // h1
-          sectionContato[i].children[0].classList.add("active");
+          console.log(namesAnimals[i]);
           // img
+          item.children[0].classList.add("active");
           sectionContato[i].children[1].children[0].children[0].classList.add(
             "active"
           );

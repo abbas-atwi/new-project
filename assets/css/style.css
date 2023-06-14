@@ -314,15 +314,27 @@ header {
   color: #222;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   margin: auto;
 }
-
+.section-info a {
+  display: block;
+  padding: 10px 45px;
+  margin-top: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fafafa;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #222;
+}
 .section-info p {
   font-size: 23px;
   text-align: center;
   font-weight: normal;
   color: #2356;
+  display: flex;
   text-transform: lowercase;
 }
 @keyframes Showmenu {
