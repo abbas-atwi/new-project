@@ -329,7 +329,7 @@ footer {
   text-align: center;
   background-color: #222;
 }
-@media (min-width: 450px) and (max-width: 480px) {
+@media (min-width: 440px) {
   .section-box {
     width: 285px;
   }
