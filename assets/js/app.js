@@ -60,11 +60,13 @@ function scrollBox() {
       for (let i = 0; i < sectionContato.length; i++) {
         setTimeout(() => {
           sectionContato[i].classList.add("active");
+          // h1
+          sectionContato[i].children[0].classList.add("active");
+          // img
+          sectionContato[i].children[1].children[0].children[0].classList.add(
+            "active"
+          );
         }, count[i]);
-        // h1
-        item.children[0].classList.add("active");
-        // img
-        item.children[1].children[0].children[0].classList.add("active");
       }
     }
   });
@@ -81,12 +83,7 @@ function showBoxH1() {
   // });
   boxAll.forEach((item) => {
     const top = item.children[0].getBoundingClientRect().top - m;
-    const count = [1000];
-    if (top) {
-      setTimeout(() => {
-        item.children[0].classList.add("active");
-      }, 1100);
-    }
+    item.children[0].classList.add("active");
   });
 }
 
@@ -99,6 +96,7 @@ window.addEventListener("scroll", () => {
   if (tops) {
     for (let i = 0; i < boxs.length; i++) {
       setTimeout(() => {
+        // box ola
         console.log(boxs[i].classList.add("active"));
       }, count[i]);
     }
