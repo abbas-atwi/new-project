@@ -335,6 +335,7 @@ header {
   margin-left: 10px;
   margin-top: 20px;
   border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(2, 2, 2, 0.5);
   color: #fafafa;
   background-color: #42dd1f;
 }
