@@ -241,6 +241,7 @@ header {
 @keyframes showBox {
   from {
     transform: translate3d(-40px, 0, 0);
+    transition: transform 0.3s ease-in-out;
   }
   to {
     transform: translate3d(0, 0, 0);
@@ -256,20 +257,29 @@ header {
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
-  border: 1px solid #fafafa;
+  border-radius: 5px;
+  background-color: #fafafa;
+  cursor: pointer;
 }
+
+.box-home:hover {
+  scale: 1.1;
+  transition: scale 0.3s ease-in-out;
+}
+
 .box-home.active {
   opacity: 1;
   animation: showBox 0.3s forwards;
+  transition: opacity 0.3s ease-in-out;
 }
 .box-home h1 {
   display: none;
-  color: #fff;
+  color: #222;
   font-weight: bold;
 }
 .box-home h1.active {
   display: block;
-  animation: showH2 0.8s forwards;
+  animation: showH2 1s forwards;
 }
 @keyframes Showmenu {
   from {
