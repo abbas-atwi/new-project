@@ -329,6 +329,15 @@ header {
   cursor: pointer;
   background-color: #222;
 }
+.btn-perfil {
+  display: inline-block;
+  padding: 10px 25px;
+  margin-left: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: #fafafa;
+  background-color: #42dd1f;
+}
 .section-info p {
   font-size: 23px;
   text-align: center;
